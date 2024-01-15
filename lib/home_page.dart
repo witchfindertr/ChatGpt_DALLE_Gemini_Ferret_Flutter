@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lab23_emsi_zekraoui/pallete.dart';
 import 'package:lab23_emsi_zekraoui/screens/dalle_page.dart';
 import 'package:lab23_emsi_zekraoui/screens/ferret_page.dart';
 import 'package:lab23_emsi_zekraoui/screens/gemini_page.dart';
@@ -18,10 +19,36 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Emsi chatBot'),
+        title: const Text('Ossama Zekraoui chatBot'),
       ),
       body: Center(
-        child: Text('Welcome to Emsi chatBot'),
+        child:Column(
+          mainAxisAlignment: MainAxisAlignment.center, // Center children vertically
+          children: [
+            ClipOval(
+              child: Container(
+                height: 200,
+                width: 200,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      'assets/images/image_ossama.jfif',
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 20),
+            Text(
+              'Welcome to Zekraoui\'s chatBot',
+              style: TextStyle(
+                fontWeight: FontWeight.w700,
+                fontSize: 17,
+              ),
+            ),
+          ],
+        )
       ),
       drawer: Drawer(
         child: ListView(
